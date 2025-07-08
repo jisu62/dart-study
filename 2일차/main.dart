@@ -1,11 +1,16 @@
 void main() {
-  for (int dan = 2; dan <= 9; dan++) {
-    if (dan % 2 == 0) {
-      print('== $dan단 ==');
-      for (int i = 1; i <= 9; i++) {
-        print('$dan x $i = ${dan * i}');
-      }
-      print(''); // 단 사이 줄바꿈
+  print('1부터 50까지의 소수:');
+  for (int i = 2; i <= 50; i++) {
+    if (isPrime(i)) {
+      print(i);
     }
   }
+}
+
+bool isPrime(int n) {
+  if (n < 2) return false;
+  for (int i = 2; i <= n ~/ 2; i++) {
+    if (n % i == 0) return false;
+  }
+  return true;
 }
