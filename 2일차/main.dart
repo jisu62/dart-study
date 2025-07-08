@@ -1,16 +1,19 @@
-void main() {
-  print('1부터 50까지의 소수:');
-  for (int i = 2; i <= 50; i++) {
-    if (isPrime(i)) {
-      print(i);
-    }
+int getMax(int num1, int num2) {
+  if (num1 > num2) {
+    return num1;
+  } else {
+    return num2;
   }
 }
 
-bool isPrime(int n) {
-  if (n < 2) return false;
-  for (int i = 2; i <= n ~/ 2; i++) {
-    if (n % i == 0) return false;
-  }
-  return true;
+void createPlayer(String name, int level, double exp) {}
+
+void hello() {
+  print("hello");
+}
+
+void main() {
+  var number = getMax(1, 2);
+
+  print(number);
 }
